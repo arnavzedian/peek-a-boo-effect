@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://swach.upon.one/ -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./index_files/main.js"></script>
+    <link rel="stylesheet" href="./index_files/main.css" />
+    <script src="./index_files/mapbox-gl.js"></script>
+    <link href="./index_files/mapbox-gl.css" rel="stylesheet" />
+    <meta
+      name="d41d8cd98f00b204e9800998ecf8427e_lib_detect"
+      id="d41d8cd98f00b204e9800998ecf8427e_lib_detect"
+    />
+    <script src="chrome-extension://cgaocdmhkmfnkdkbnckgmpopcbpaaejo/library/libraries.js"></script>
+    <script src="chrome-extension://cgaocdmhkmfnkdkbnckgmpopcbpaaejo/content_scripts/lib_detect.js"></script>
+  </head>
+  <div
+    id="screen-shader"
+    style="
+      transition: opacity 0.1s ease 0s;
+      z-index: 2147483647;
+      margin: 0;
+      border-radius: 0;
+      padding: 0;
+      background: #fab760 !important;
+      pointer-events: none;
+      position: fixed;
+      top: -10%;
+      right: -10%;
+      width: 120%;
+      height: 120%;
+      opacity: 0.2;
+      mix-blend-mode: multiply;
+      display: none;
+    "
+  ></div>
+  <body data-new-gr-c-s-check-loaded="14.1008.0" data-gr-ext-installed="">
+    <button
+      id="sideButton"
+      class="sideButton"
+      onclick="accessSideBar()"
+      value="notActive"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z" />
+      </svg>
+    </button>
+    <div id="navigation">
+      <div id="sideBar" class="sideBar">
+        <div id="overlay-content" class="sideBarContent">
+          <a onclick="show(this)">Intro</a>
+          <a onclick="show(this)">E-Recycling Info</a>
+          <a onclick="show(this)">Services</a>
+          <a onclick="show(this)">Partners</a>
+          <a onclick="show(this)">Locate Us</a>
+          <a onclick="show(this)">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div id="Images">
+      <img id="part1" src="./index_files/some.jpg" />
+      <img id="part2" src="./index_files/space.jpg" />
+    </div>
+
+    <div id="mainContent">
+      <div class="fullWidth" id="intro">
+        <section class="mainPage leftSection">Main page</section>
+      </div>
+
+      <div class="fullWidth" id="e-recycling-info">
+        <section class="rightSection">Info</section>
+      </div>
+      <div class="fullWidth" id="services">
+        <section class="Services leftSection">Services</section>
+      </div>
+      <div class="fullWidth" id="partners">
+        <section class="rightSection">Partners</section>
+      </div>
+      <div class="fullWidth" id="locate-us">
+        <section class="Map mapboxgl-map leftSection"></section>
+      </div>
+
+      <!-- <script>
+        mapboxgl.accessToken =
+          "pk.eyJ1IjoiZGF6ZWRtZWNoYW5pYzIxMCIsImEiOiJja28yYXVycmMweHB6Mm9tdm9rNGUzMmx5In0.WnslH7SxaKuhF6dTn172lA";
+        var map = new mapboxgl.Map({
+          container: "locate-us", // container ID
+          style: "mapbox://styles/mapbox/streets-v11", // style URL
+          center: [-74.5, 40], // starting position [lng, lat]
+          zoom: 9, // starting zoom
+        });
+      </script> -->
+
+      <div class="fullWidth" id="contact-us">
+        <section class="Contacts rightSection">Contact Us!</section>
+      </div>
+    </div>
+  </body>
+</html>
